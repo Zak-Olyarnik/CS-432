@@ -1,0 +1,10 @@
+﻿  main.cpp
+c:\users\zwo\source\repos\a5\a5\main.cpp(92): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  SubdividedSphere.cpp
+  Plane.cpp
+  Cube.cpp
+  Generating Code...
+  Compiling...
+  Drawable.cpp
+  Generating Code...
+  A5.vcxproj -> C:\Users\ZWO\source\repos\A5\Debug\A5.exe

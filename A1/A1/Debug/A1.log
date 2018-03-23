@@ -1,0 +1,3 @@
+﻿  Circle.cpp
+c:\users\zwo\source\repos\a1\a1\circle.cpp(25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  A1.vcxproj -> c:\Users\ZWO\source\repos\A1\Debug\A1.exe
