@@ -1,5 +1,9 @@
-﻿  main.cpp
+﻿  SubdividedSphere.cpp
   SkyboxCube.cpp
-  Camera.cpp
+  SkyPlane.cpp
+  Ring.cpp
+c:\users\zwo\source\repos\final\final\ring.cpp(125): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Loop.cpp
+  Ground.cpp
   Generating Code...
   Final.vcxproj -> C:\Users\ZWO\source\repos\Final\Debug\Final.exe

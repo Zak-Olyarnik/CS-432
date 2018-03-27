@@ -17,7 +17,7 @@ SkyboxCube::SkyboxCube()
 	
 	//-----------------------------------------------------------------------
 	// load shader program
-	assert((program = InitShader("vshader_skybox.glsl", "fshader_skybox.glsl")) != -1);
+	assert((program = InitShader("Shaders/vshader_skybox.glsl", "Shaders/fshader_skybox.glsl")) != -1);
 	glUseProgram(program);
 
 	// get the location of the vPosition attribute in the shader
@@ -36,11 +36,11 @@ SkyboxCube::SkyboxCube()
 	glTexParameterf(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
 
 	// read in the texture source images
-	image = ppmRead((char*)"skybox_top.ppm", &imgSize, &imgSize);
+	image = ppmRead((char*)"Textures/skybox_top.ppm", &imgSize, &imgSize);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Y, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
-	image = ppmRead((char*)"skybox_bottom.ppm", &imgSize, &imgSize);
+	image = ppmRead((char*)"Textures/skybox_bottom.ppm", &imgSize, &imgSize);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_Y, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
-	image = ppmRead((char*)"skybox_side.ppm", &imgSize, &imgSize);
+	image = ppmRead((char*)"Textures/skybox_side.ppm", &imgSize, &imgSize);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_X, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Z, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);

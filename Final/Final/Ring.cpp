@@ -25,7 +25,7 @@ Ring::Ring(SubdividedSphere* s)
 
 	//-----------------------------------------------------------------------
 	// load shader program
-	assert((program = InitShader("vshader_ring.glsl", "fshader_ring.glsl")) != -1);
+	assert((program = InitShader("Shaders/vshader_ring.glsl", "Shaders/fshader_ring.glsl")) != -1);
 	glUseProgram(program);
 
 	// get the location of the vPosition attribute in the shader

@@ -19,7 +19,7 @@ SubdividedSphere::SubdividedSphere()
 
 	//-----------------------------------------------------------------------
 	// load shader program
-	assert((program = InitShader("vshader_sphere.glsl", "fshader_sphere.glsl")) != -1);
+	assert((program = InitShader("Shaders/vshader_sphere.glsl", "Shaders/fshader_sphere.glsl")) != -1);
 	glUseProgram(program);
 
 	// get the location of the vPosition attribute in the shader
@@ -43,13 +43,13 @@ SubdividedSphere::SubdividedSphere()
 	glTexParameterf(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
 
 	// read in the texture source images
-	image = ppmRead((char*)"blue.ppm", &imgSize, &imgSize);
+	image = ppmRead((char*)"Textures/blue.ppm", &imgSize, &imgSize);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Y, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_Y, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_X, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Z, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
-	image = ppmRead((char*)"sonic_face.ppm", &imgSize, &imgSize);
+	image = ppmRead((char*)"Textures/sonic_face.ppm", &imgSize, &imgSize);
 	glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_Z, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	delete[] image;
 	

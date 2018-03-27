@@ -84,8 +84,8 @@ int main(int argc, char **argv)
 	windowID = glutCreateWindow("CS-432 Final");
 
 	// print out info about our system.  Must be done after creating a usage of GL, via glut
-	fprintf(stdout, "OpenGL Version: %s\n", glGetString(GL_VERSION));
-	fprintf(stdout, "GLSL Version: %s\n", glGetString(GL_SHADING_LANGUAGE_VERSION));
+	//fprintf(stdout, "OpenGL Version: %s\n", glGetString(GL_VERSION));
+	//fprintf(stdout, "GLSL Version: %s\n", glGetString(GL_SHADING_LANGUAGE_VERSION));
 
 	// initialize glew on non-apple systems
 #ifndef __APPLE__
@@ -94,7 +94,7 @@ int main(int argc, char **argv)
 	{
 		fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
 	}
-	fprintf(stdout, "Status: Using GLEW %s\n", glewGetString(GLEW_VERSION));
+	//fprintf(stdout, "Status: Using GLEW %s\n", glewGetString(GLEW_VERSION));
 #endif
 
 	init(); //initalize objects
@@ -218,7 +218,7 @@ void keyboard(unsigned char key, int x, int y)
 // Special keys callback
 void specialKeys(int key, int x, int y)
 {
-	if (activeCam == &loopCam)
+	if (activeCam == &loopCam || changeLane != 0)
 		return;
 
 	switch (key)	// controls left and right movement of sphere, sensitive to relative positions of sphere and camera

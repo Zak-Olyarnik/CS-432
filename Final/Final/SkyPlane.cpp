@@ -22,7 +22,7 @@ SkyPlane::SkyPlane()
 
 	//-----------------------------------------------------------------------
 	// load shader program
-	assert((program = InitShader("vshader_skyplane.glsl", "fshader_skyplane.glsl")) != -1);
+	assert((program = InitShader("Shaders/vshader_skyplane.glsl", "Shaders/fshader_skyplane.glsl")) != -1);
 	glUseProgram(program);
 
 	// get the location of the vPosition attribute in the shader
@@ -45,7 +45,7 @@ SkyPlane::SkyPlane()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 
 	// read in the texture source images
-	image = ppmRead((char*)"skybox_side.ppm", &imgSize, &imgSize);
+	image = ppmRead((char*)"Textures/skybox_side.ppm", &imgSize, &imgSize);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);  //move the data onto the GPU
 	delete[] image;
 

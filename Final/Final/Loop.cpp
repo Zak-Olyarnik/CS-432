@@ -21,7 +21,7 @@ Loop::Loop()
 	
 	//-----------------------------------------------------------------------
 	// load shader program
-	assert((program = InitShader("vshader_ground.glsl", "fshader_ground.glsl")) != -1);
+	assert((program = InitShader("Shaders/vshader_ground.glsl", "Shaders/fshader_ground.glsl")) != -1);
 	glUseProgram(program);
 
 	// get the location of the vPosition attribute in the shader
@@ -49,7 +49,7 @@ Loop::Loop()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 
 	// read in the texture source image
-	image = ppmRead((char*)"ground.ppm", &imgSize, &imgSize);
+	image = ppmRead((char*)"Textures/ground.ppm", &imgSize, &imgSize);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, imgSize, imgSize, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	delete[] image;
 

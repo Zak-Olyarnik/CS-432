@@ -146,21 +146,22 @@
     <ClCompile Include="SubdividedSphere.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="blue.ppm" />
-    <None Include="fshader_ground.glsl" />
-    <None Include="fshader_ring.glsl" />
-    <None Include="fshader_skybox.glsl" />
-    <None Include="fshader_skyplane.glsl" />
-    <None Include="fshader_sphere.glsl" />
-    <None Include="skybox_bottom.ppm" />
-    <None Include="skybox_side.ppm" />
-    <None Include="skybox_top.ppm" />
-    <None Include="sonic_face.ppm" />
-    <None Include="vshader_ground.glsl" />
-    <None Include="vshader_ring.glsl" />
-    <None Include="vshader_skybox.glsl" />
-    <None Include="vshader_skyplane.glsl" />
-    <None Include="vshader_sphere.glsl" />
+    <None Include="Shaders\fshader_ground.glsl" />
+    <None Include="Shaders\fshader_ring.glsl" />
+    <None Include="Shaders\fshader_skybox.glsl" />
+    <None Include="Shaders\fshader_skyplane.glsl" />
+    <None Include="Shaders\fshader_sphere.glsl" />
+    <None Include="Shaders\vshader_ground.glsl" />
+    <None Include="Shaders\vshader_ring.glsl" />
+    <None Include="Shaders\vshader_skybox.glsl" />
+    <None Include="Shaders\vshader_skyplane.glsl" />
+    <None Include="Shaders\vshader_sphere.glsl" />
+    <None Include="Textures\blue.ppm" />
+    <None Include="Textures\ground.ppm" />
+    <None Include="Textures\skybox_bottom.ppm" />
+    <None Include="Textures\skybox_side.ppm" />
+    <None Include="Textures\skybox_top.ppm" />
+    <None Include="Textures\sonic_face.ppm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
